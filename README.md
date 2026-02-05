@@ -1,6 +1,6 @@
 ![front page](./docs/images/titan_front_page.jpg)
 
-## TITAN - Thunderstorm Identification Tracking Analysis & Nowcasting
+# RADAR REFRACTIVITY in LROSE
 
 <a name="overview"/>
 
