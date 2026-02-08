@@ -50,7 +50,7 @@ write_debug_mdv_files = TRUE;
 //
 // Type: string
 
-debug_mdv_url = "/scr/cirrus1/rsfdata/projects/pecan/refract/cal_debug";
+debug_mdv_url = "$(DATA_DIR)/refract/cal_debug";
 
 ///////////// debug_lat ///////////////////////////////
 //
@@ -149,7 +149,7 @@ end_time = "2015 06 28 11 00 00";
 //
 // Type: string
 
-output_file_path = "/tmp/RefractCalib/RefractCalib.pecan.day.mdv.nc";
+output_file_path = "$(DATA_DIR)/refract/RefractCalib/RefractCalib.pecan.day.mdv.nc";
 
 ///////////// output_dir //////////////////////////////
 //
@@ -157,7 +157,7 @@ output_file_path = "/tmp/RefractCalib/RefractCalib.pecan.day.mdv.nc";
 //
 // Type: string
 
-output_dir = "/tmp/RefractCalib/polar";
+output_dir = "$(DATA_DIR)/refract/RefractCalib";
 
 //======================================================================
 //

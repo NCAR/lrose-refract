@@ -1,0 +1,8 @@
+#! /bin/csh
+
+source ./set_env_vars
+
+cd $PROJ_DIR/params
+
+RefractCalib -params RefractCalib.pecan -start "2015 06 28 11 00 00" -end "2015 06 28 17 00 00" -out_path $DATA_DIR/refract/RefractCalib/RefractCalib.pecan.day.mdv.nc -debug
+
