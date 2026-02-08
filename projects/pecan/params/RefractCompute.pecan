@@ -47,7 +47,7 @@ write_debug_mdv_files = FALSE;
 //
 // Type: string
 
-debug_mdv_url = "/tmp/RefractCompute/debug";
+debug_mdv_url = "$(DATA_DIR)/refract/cal_debug";
 
 ///////////// debug_lat ///////////////////////////////
 //
@@ -133,7 +133,7 @@ procmap_register_interval = 60;
 //
 // Type: string
 
-input_dir = "/scr/cirrus1/rsfdata/projects/pecan/cfradial/spol/moments/sband/sur";
+input_dir = "$(MOMENTS_DIR)";
 
 ///////////// n_field_name ////////////////////////////
 //
@@ -205,7 +205,7 @@ end_time = "2015 06 26 12 00 00";
 //
 // Type: string
 
-calib_file_path_day = "/tmp/RefractCalib/RefractCalib.pecan.day.mdv.nc";
+calib_file_path_day = "$(DATA_DIR)/refract/RefractCalib/RefractCalib.pecan.day.mdv.nc";
 
 ///////////// calib_file_path_night ///////////////////
 //
@@ -215,7 +215,7 @@ calib_file_path_day = "/tmp/RefractCalib/RefractCalib.pecan.day.mdv.nc";
 //
 // Type: string
 
-calib_file_path_night = "/tmp/RefractCalib/RefractCalib.pecan.day.mdv.nc";
+calib_file_path_night = "$(DATA_DIR)/refract/RefractCalib/RefractCalib.pecan.night.mdv.nc";
 
 ///////////// elevation_angle /////////////////////////
 //
@@ -396,7 +396,7 @@ dbz_field_name = "DBZ";
 //
 // Type: string
 
-output_dir = "/tmp/RefractCompute/polar";
+output_dir = "$(DATA_DIR)/refract/RefractCompute";
 
 //======================================================================
 //

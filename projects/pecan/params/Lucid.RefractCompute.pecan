@@ -226,7 +226,7 @@ start_mode = MODE_ARCHIVE;
 //
 // Type: string
 
-archive_start_time = "2015 06 28 11 00 00";
+archive_start_time = "2015 06 26 00 05 00";
 
 //======================================================================
 //
@@ -302,14 +302,18 @@ color_scale_urls = "/home/rsfdata/git/lrose-refract/projects/pecan/display/color
 // 1D array - variable length.
 
 fields = {
-  { "main", "CAL_STRENGTH", "CAL_STRENGTH", "$(DATA_DIR)/refract/RefractCalib", "strength", "power_AIQ.colors", "dB", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
-  { "main", "CAL_AV_I", "AV_I", "$(DATA_DIR)/refract/RefractCalib", "av_i", "iqz.colors", "", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
-  { "main", "CAL_AV_Q", "AV_Q", "$(DATA_DIR)/refract/RefractCalib", "av_q", "iqz.colors", "", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
-  { "main", "CAL_PHASE_ERR", "CAL_PHASE_ERR", "$(DATA_DIR)/refract/RefractCalib", "phase_er", "angle_180.colors", "deg", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
-  { "main", "CAL_QUALITY", "CAL_QUALOTY", "$(DATA_DIR)/refract/RefractCalib", "quality", "ncp.colors", "dB", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
-  { "", "MEAN_I", "MEAN_I", "$(DATA_DIR)/refract/RefractCompute", "MeanI", "iqz.colors", "dB", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
-  { "", "MEAN_I", "MEAN_I", "$(DATA_DIR)/refract/RefractCompute", "MeanI", "iqz.colors", "dB", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
-  { "", "MEAN_I", "MEAN_I", "$(DATA_DIR)/refract/RefractCompute", "MeanI", "iqz.colors", "dB", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "main", "SNRHC", "SNRHC", "$(DATA_DIR)/refract/RefractCompute", "SNRHC", "snr.colors", "dB", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "main", "CPA", "CPA", "$(DATA_DIR)/refract/RefractCompute", "CPA", "cpa.colors", "dB", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "main", "MEANI", "MEANI", "$(DATA_DIR)/refract/RefractCompute", "MeanI", "iqz.colors", "", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "main", "MEANQ", "MEANQ", "$(DATA_DIR)/refract/RefractCompute", "MeanQ", "iqz.colors", "", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "main", "N", "N", "$(DATA_DIR)/refract/RefractCompute", "N", "refrac_N_fabry2.colors", "dB", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "main", "DELTA_N", "DELTA_N", "$(DATA_DIR)/refract/RefractCompute", "DELTA_N", "delta_N.colors", "dB", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "main", "SIGMA_N", "SIGMA_N", "$(DATA_DIR)/refract/RefractCompute", "SIGMA_N", "refrac_sigmaN.colors", "dB", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "main", "SIGMA_DN", "SIGMA_DN", "$(DATA_DIR)/refract/RefractCompute", "SIGMA_DN", "refrac_sigmaN.colors", "dB", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "main", "Quality", "Quality", "$(DATA_DIR)/refract/RefractCompute", "Quality", "cpa.colors", "", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "", "DBZ_F", "DBZ_F", "$(MOMENTS_DIR)", "DBZ_F", "dbz.colors", "dBZ", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "", "DBZ_F", "DBZ_F", "$(MOMENTS_DIR)", "DBZ_F", "dbz.colors", "dBZ", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "", "DBZ_F", "DBZ_F", "$(MOMENTS_DIR)", "DBZ_F", "dbz.colors", "dBZ", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
   { "main", "DBZ_F", "DBZ_F", "$(MOMENTS_DIR)", "DBZ_F", "dbz.colors", "dBZ", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
   { "main", "VEL_F", "VEL_F", "$(MOMENTS_DIR)", "VEL_F", "vel.colors", "m/s", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
   { "main", "WIDTH_F", "WIDTH_F", "$(MOMENTS_DIR)", "WIDTH_F", "width.colors", "m/s", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},

@@ -111,7 +111,7 @@ mode = ARCHIVE;
 //
 // Type: string
 
-input_dir = "/scr/cirrus1/rsfdata/projects/pecan/cfradial/spol/moments/sband/sur";
+input_dir = "$(MOMENTS_DIR)";
 
 ///////////// start_time //////////////////////////////
 //
