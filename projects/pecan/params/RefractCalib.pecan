@@ -42,7 +42,7 @@ debug = DEBUG_OFF;
 //
 // Type: boolean
 
-write_debug_mdv_files = TRUE;
+write_debug_mdv_files = FALSE;
 
 ///////////// debug_mdv_url ///////////////////////////
 //
