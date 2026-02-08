@@ -1,0 +1,8 @@
+#! /bin/csh
+
+source ./set_env_vars
+
+cd $PROJ_DIR/params
+
+Lucid -params Lucid.RefractCalib.pecan -start_time "2015 06 28 14 00 00" -time_span 300 -debug
+
