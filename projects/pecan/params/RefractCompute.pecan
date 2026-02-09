@@ -1,5 +1,5 @@
 /**********************************************************************
- * TDRP params for ./RefractCompute
+ * TDRP params for RefractCompute
  **********************************************************************/
 
 //======================================================================
@@ -32,63 +32,6 @@
 //     DEBUG_EXTRA
 
 debug = DEBUG_OFF;
-
-///////////// write_debug_mdv_files ///////////////////
-//
-// Flag indicating whether to write debug MDV files.
-//
-// Type: boolean
-
-write_debug_mdv_files = FALSE;
-
-///////////// debug_mdv_url ///////////////////////////
-//
-// Debug MDV file URL.
-//
-// Type: string
-
-debug_mdv_url = "$(DATA_DIR)/refract/cal_debug";
-
-///////////// debug_lat ///////////////////////////////
-//
-// debug latitude.
-//
-// Extreme debugging at a point, set to -9999 to disable.
-//
-// Type: double
-
-debug_lat = -9999;
-
-///////////// debug_lon ///////////////////////////////
-//
-// debug longitude.
-//
-// Extreme debugging at a point, set to -9999 to disable.
-//
-// Type: double
-
-debug_lon = -9999;
-
-///////////// debug_npt ///////////////////////////////
-//
-// debug npt.
-//
-// Extreme debugging radius around the debug point to keep showing 
-//   debugging, number of gridpoints.
-//
-// Type: int
-
-debug_npt = 1;
-
-///////////// debug_show_source_code_method_and_line //
-//
-// Source code methods/line numbers flag.
-//
-// true to show with debug output, ,false to hide.
-//
-// Type: boolean
-
-debug_show_source_code_method_and_line = FALSE;
 
 //======================================================================
 //
@@ -564,4 +507,41 @@ threshold_using_sigma_n = FALSE;
 // Type: double
 
 max_sigma_n = 30;
+
+//======================================================================
+//
+// DEBUGGING READING INPUT FILES.
+//
+//======================================================================
+ 
+///////////// debug_lat ///////////////////////////////
+//
+// debug latitude.
+//
+// Extreme debugging at a point, set to -9999 to disable.
+//
+// Type: double
+
+debug_lat = -9999;
+
+///////////// debug_lon ///////////////////////////////
+//
+// debug longitude.
+//
+// Extreme debugging at a point, set to -9999 to disable.
+//
+// Type: double
+
+debug_lon = -9999;
+
+///////////// debug_npt ///////////////////////////////
+//
+// debug npt.
+//
+// Extreme debugging radius around the debug point to keep showing 
+//   debugging, number of gridpoints.
+//
+// Type: int
+
+debug_npt = 1;
 
