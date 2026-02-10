@@ -1,0 +1,232 @@
+/**********************************************************************
+ * TDRP params for CalcMoisture
+ **********************************************************************/
+
+//======================================================================
+//
+// CalcMoisture.
+//
+// CalcMoisture calculates water vapor pressure (e) and dew point 
+//   temperature based on the refractivity N field and the mean 
+//   temperature and pressure values from a group of weather stations.
+//
+//======================================================================
+ 
+//======================================================================
+//
+// DEBUGGING.
+//
+//======================================================================
+ 
+///////////// debug ///////////////////////////////////
+//
+// Debug option.
+//
+// If set, debug messages will be printed appropriately.
+//
+// Type: enum
+// Options:
+//     DEBUG_OFF
+//     DEBUG_NORM
+//     DEBUG_VERBOSE
+//     DEBUG_EXTRA
+
+debug = DEBUG_OFF;
+
+//======================================================================
+//
+// REALTIME PROCESS CONTROL.
+//
+//======================================================================
+ 
+///////////// instance ////////////////////////////////
+//
+// Program instance for process registration.
+//
+// REALTIME mode only. This application registers with procmap. This is 
+//   the instance used for registration.
+//
+// Type: string
+
+instance = "pecan";
+
+///////////// procmap_register_interval ///////////////
+//
+// Interval for registering with procmap (secs).
+//
+// REALTIME mode only. The app will register with procmap at this 
+//   interval, to update its status. If it does not register within twice 
+//   this interval, the auto_restart script will restart the app.
+//
+// Type: int
+
+procmap_register_interval = 60;
+
+//======================================================================
+//
+// DATA INPUT.
+//
+//======================================================================
+ 
+///////////// input_dir ///////////////////////////////
+//
+// Input directory.
+//
+// Directory for input refractivity files.
+//
+// Type: string
+
+input_dir = "$(DATA_DIR)/refract/RefractCompute";
+
+///////////// n_field_name ////////////////////////////
+//
+// Name of field with calculated N values.
+//
+// Type: string
+
+n_field_name = "N";
+
+///////////// mode ////////////////////////////////////
+//
+// Operating mode.
+//
+// In FILELIST mode, we move through the list of file names specified on 
+//   the command line.
+//
+// In REALTIME mode, the program waits for a new input file to arrive in 
+//   'input_dir'.
+//
+// In ARCHIVE mode, we move through the files in input_dir between the 
+//   start and end times set on the command line.
+//
+// In ARCHIVE mode, input_dir must be one above the day-directory.
+//
+// Type: enum
+// Options:
+//     FILELIST
+//     ARCHIVE
+//     REALTIME
+
+mode = ARCHIVE;
+
+///////////// max_realtime_data_age_secs //////////////
+//
+// Maximum age of realtime data (secs).
+//
+// REALTIME mode only. Only data files less old than this will be 
+//   processed.
+//
+// Type: int
+
+max_realtime_data_age_secs = 300;
+
+///////////// start_time //////////////////////////////
+//
+// Set the start time for ARCHIVE mode analysis.
+//
+// Format is 'yyyy mm dd hh mm ss'.
+//
+// Type: string
+
+start_time = "2015 06 26 00 00 00";
+
+///////////// end_time ////////////////////////////////
+//
+// Set the end time for ARCHIVE mode analysis.
+//
+// Format is 'yyyy mm dd hh mm ss'.
+//
+// Type: string
+
+end_time = "2015 06 26 12 00 00";
+
+//======================================================================
+//
+// DATA OUTPUT.
+//
+//======================================================================
+ 
+///////////// output_dir //////////////////////////////
+//
+// Directory for moisture files in MDV format.
+//
+// Type: string
+
+output_dir = "$(DATA_DIR)/refract/moisture";
+
+//======================================================================
+//
+// SURFACE STATION DATA INPUT.
+//
+//======================================================================
+ 
+///////////// station_url /////////////////////////////
+//
+// URL of SPDB database containing surface station information.
+//
+// Type: string
+
+station_url = "$(SPDB_DIR)/metar";
+
+///////////// station_list ////////////////////////////
+//
+// List of stations to use for calculating the mean temperature and 
+//   pressure values.
+//
+// 	name is the name of the station as it appears in the database.
+// 	elevation is the elevation of the station in meters. This elevation 
+//   value is only used if get_elevation_from_data is set to false.
+//
+// Type: struct
+//   typedef struct {
+//      string name;
+//      double elevation;
+//   }
+//
+// 1D array - variable length.
+
+station_list = {
+  {
+    name = "KHYS",
+    elevation = 609
+  }
+  ,
+  {
+    name = "KGBD",
+    elevation = 575
+  }
+  ,
+  {
+    name = "KDDC",
+    elevation = 789
+  }
+};
+
+///////////// get_elevation_from_data /////////////////
+//
+// Flag indicating whether to get the station elevations from the data 
+//   or from the station_list parameter.
+//
+// If set to TRUE, the station elevations are taken from the database. 
+//   If set to FALSE, the station elevations are taken from the 
+//   station_list parameter.
+// This allows you to override the station elevation values in the data 
+//   if they are wrong for some reason.
+//
+// Type: boolean
+
+get_elevation_from_data = TRUE;
+
+///////////// max_station_valid_secs //////////////////
+//
+// Maximum valid time for station information in seconds.
+//
+// If a station hasn't reported temperature and pressure values within 
+//   this number of seconds before the N field time stamp, the station 
+//   will not be included in the mean temperature and pressure 
+//   calculations.
+//
+// Type: long
+
+max_station_valid_secs = 3600;
+

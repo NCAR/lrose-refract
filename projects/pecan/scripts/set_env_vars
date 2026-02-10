@@ -3,3 +3,4 @@
 setenv PROJ_DIR $HOME/git/lrose-refract/projects/pecan
 setenv DATA_DIR /tmp/data/pecan
 setenv MOMENTS_DIR /scr/cirrus1/rsfdata/projects/pecan/cfradial/spol/moments/sband/sur
+setenv SPDB_DIR /scr/cirrus1/rsfdata/projects/pecan/spdb
