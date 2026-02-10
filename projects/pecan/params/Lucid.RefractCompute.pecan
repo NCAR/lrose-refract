@@ -1,4 +1,4 @@
-/**********************************************************************
+2/**********************************************************************
  * TDRP params for Lucid
  **********************************************************************/
 
@@ -312,8 +312,8 @@ fields = {
   { "main", "SIGMA_DN", "SIGMA_DN", "$(DATA_DIR)/refract/RefractCompute", "SIGMA_DN", "percent.colors", "dB", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
   { "main", "quality", "quality", "$(DATA_DIR)/refract/RefractCompute", "quality", "cpa.colors", "", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
   { "main", "E", "E", "$(DATA_DIR)/refract/moisture", "e", "rhohv.colors", "_", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
-  { "main", "TD", "TD", "$(DATA_DIR)/refract/moisture", "Td", "dewpoint.colors", "_", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
-  { "main", "RH", "RH", "$(DATA_DIR)/refract/moisture", "RH", "rh.colors", "_", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "main", "TD", "TD", "$(DATA_DIR)/refract/moisture", "Td", "temp.colors", "_", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
+  { "main", "RH", "RH", "$(DATA_DIR)/refract/moisture", "RH", "fraction.colors", "_", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
   { "", "DBZ_F", "DBZ_F", "$(MOMENTS_DIR)", "DBZ_F", "dbz.colors", "dBZ", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
   { "", "DBZ_F", "DBZ_F", "$(MOMENTS_DIR)", "DBZ_F", "dbz.colors", "dBZ", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
   { "", "DBZ_F", "DBZ_F", "$(MOMENTS_DIR)", "DBZ_F", "dbz.colors", "dBZ", -5, 80, 5, POLYGONS, TRUE, FALSE, FALSE, FALSE, FALSE},
@@ -3451,12 +3451,6 @@ winds_on_at_startup = FALSE;
 // 1D array - variable length.
 
 winds = {
-  { "Surface", "Surface", "mdvp:://front.eol.ucar.edu:8080:pecan/mdv/surf_interp?use_http=true", "Uwind", "Vwind", "None", "m/s", 1, WIND_ARROW, "yellow", TRUE},
-  { "RUCRAP", "RUCRAP", "mdvp:://front.eol.ucar.edu:8080:pecan/mdv/ruc?use_http=true", "UGRD", "VGRD", "None", "m/s", 1, WIND_ARROW, "cyan", TRUE},
-  { "OpticalFlow", "OpticalFlow", "mdvp:://front.eol.ucar.edu:8080:pecan/mdv/optflow/mrms?use_http=true", "U", "V", "None", "m/s", 1, WIND_BARB, "seagreen", FALSE},
-  { "VDRASr_Vector", "VDRASr_Vector", "mdvp:://front.eol.ucar.edu:8080:/data/zhuming/pecan/mdv/anal?use_http=true", "uwind", "vwind", "wwind", "m/s", 0, WIND_ARROW, "red", TRUE},
-  { "VDRASr_Shear", "VDRASr_Shear", "mdvp:://front.eol.ucar.edu:8080:/data/zhuming/pecan/mdv/post?use_http=true", "us", "vs", "None", "m/s", 0, WIND_ARROW, "orange", TRUE},
-  { "VDRASr_MSL", "VDRASr_MSL", "mdvp:://front.eol.ucar.edu:8080:/data/zhuming/pecan/mdv/post?use_http=true", "umsl", "vmsl", "wmsl", "m/s", 0, WIND_ARROW, "green", TRUE}
 };
 
 ///////////// wind_barb_shaft_len /////////////////////
