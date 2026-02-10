@@ -1,0 +1,8 @@
+#! /bin/csh
+
+source ./set_env_vars
+
+cd $PROJ_DIR/params
+
+CalcMoisture -params CalcMoisture.pecan -start "2015 06 26 00 00 00" -end "2015 06 26 12 00 00" -debug
+
